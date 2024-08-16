@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        .center{
+            border:2px solid gray;
+            margin:auto;
+            width:500px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top:50px;
+            position:relative;
+            border-radius: 10px;
+        }
+        input{
+            padding:10px;
+            width:400px;
+            margin-top: 30px;
+            border-radius:5px;
+            border:1px solid gray;
+            font-size:16px;
+            cursor: pointer;
+            box-shadow: 0px 0px 5px;
+        }
+        .registernow-btn{
+            margin-top: 30px;
+            padding:10px;
+            font-size:16px;
+            border-radius: 5px;
+            border:none;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0px 0px 5px;
+            width:420px;
+        }
+        .registernow-btn:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 0px 5px;
+        }
+        .log-btn{
+            text-decoration: none;
+            color:green;
+            font-weight: bold;
+        }
+        .x-btn{
+            position:absolute;
+            top:5px;
+            right:5px;
+        }
+        @media (min-width:374px) and (max-width:667px){
+            .center{
+                width:350px;
+                border-radius: 10px;
+            }
+            input{
+                width:300px;
+            }
+            .registernow-btn{
+                width:300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div class="center">
+            <h2>REGISTER NOW</h2>
+            <div class="div1"><input type="text" placeholder="enter your name"></div>
+            <div class="div2"><input type="email" placeholder="enter your email"></div>
+            <div class="div3"><input type="password" placeholder="enter your password"></div>
+            <div class="div4"><input type="password" placeholder="confrim your password"></div>
+            <div class="div4"><input type="file" placeholder="No file chosen"></div>
+            <div class="div6"><button class="registernow-btn">Register Now</button></div>
+            <div class="div7"><p>already have an account? <a href="Login.html" class="log-btn">Login Now</a></p></div>
+            <div class="x-btn"><a href="coffee project.html"><img src="/coffee shop project/X icon.png" class="xicon"></a></div>
+        </div>
+    </body>
+</body>
+</html>

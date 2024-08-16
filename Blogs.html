@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:0;
+        }
+        .header{
+            display:flex;
+            gap:40px;
+            justify-content: space-between;
+            align-items: center;
+            background-color: bisque;
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            height:80px;
+            z-index:2;
+        }
+        .logo{
+            width:80px;
+        }
+        .menu-icons{
+            font-size:25px;
+            cursor: pointer;
+            word-spacing: 25px;
+        }
+        .nav1, .nav2, .nav3, .nav4, .nav5, .nav6{
+            color:black;
+        }
+        .nav1:hover, .nav2:hover, .nav3:hover, .nav4:hover, .nav5:hover, .nav6:hover{
+            text-decoration: underline;
+            color:orangered;
+        }
+        a{
+            text-decoration: none;
+        }
+        .right{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .search-btn{
+            padding:2px 5px 0px 5px;
+            cursor: pointer;
+        }
+        /* .icon{
+            width:17px;
+        } */
+        .cart{
+            width:25px;
+            margin-right:10px;
+        }
+        .login-btn{
+            padding:2.8px 15px 3px 15px;
+            text-align: center;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(131, 131, 219);
+            color:white;
+            font-size:17.5px;
+            cursor: pointer;
+        }
+        .login-btn:hover{
+            background-color: white;
+            color:blue;
+            border:1px solid blue;
+            transform: scale(1.1);
+        }
+        .dropdown{
+            display: inline-block;
+            position: relative;
+        }
+        .menubar{
+            width:40px;
+            height:40px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            width: 420%;
+            overflow: auto;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            display: block;
+            color: black;
+            padding: 5px;
+            text-decoration: none;
+            background-color: white;
+        }
+        .dropdown-content a:hover {
+            color: #FFFFFF;
+            background-color: #00A4BD;
+        }
+        /* header ends */
+        main{
+            margin-top: 90px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            font-size: 30px;
+            color: rgb(217, 62, 34);
+        }
+        .blog_container{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 20px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .video_container{
+            box-shadow: 0px 0px 5px;
+            width:90%;
+            margin-left:10px;
+        }
+        .blog{
+            width:100%;
+            height:100%;
+        }
+        .information{
+            font-size:18px;
+        }
+        p{
+            margin-top: -15px;
+        }
+        .read-btn{
+            padding:5px 20px 5px 20px;
+            margin-bottom:10px;
+            font-size: 15px;
+            background-color: rgb(226, 96, 49);
+            border:none;
+            border-radius: 5px;
+            color:white;
+            cursor: pointer;
+        }
+        /* footer starts */
+        hr{
+            border:1px solid black;
+        }
+        footer{
+            margin-top:120px;
+            text-align: center;
+        }
+        .media-icon1{
+            width:40px;
+        }
+        .media-icons{
+            margin-top: 20px;
+        }
+        footer p{
+            margin-top: 10px;
+        }
+        @media (min-width:375px) and (max-width:667px){
+            .logo{
+                display:none;
+            }
+            .menu-icons{
+                font-size:17px;
+            }
+            .nav2{
+                margin-left: 12px;
+            }
+            .nav4{
+                margin-left: -10px;
+            }
+            .right{
+                gap:5px;
+            }
+            .login-btn{
+                font-size: 15px;
+            }
+            .menubar{
+                width:35px;
+                height:35px;
+                margin-top:4px;
+            }
+            .blog_container{
+                grid-template-columns: repeat(1,1fr);
+                row-gap: 20px;
+            }
+            .video_container{
+                box-shadow: 0px 0px 5px;
+                width:90%;
+                margin-left: 15px;
+                border:2px solid gray;
+            }
+            footer{
+                font-size:15px;
+            }
+            .dropdown-content{
+                width:400%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="coffeelogo">
+            <a href="#" class="icon">
+                <img src="/coffee shop project/coffee shop logo.png" alt="" class="logo">
+            </a>
+        </div>
+        <div class="menu-icons">
+            <a href="coffee project.html" class="nav1">Home</a>
+            <a href="About.html" class="nav2">About</a>
+            <a href="Products.html" class="nav3">Products</a>
+            <a href="Review.html" class="nav4">Review</a>
+            <a href="Contact.html" class="nav5">Contact</a>
+            <a href="Blogs.html" class="nav6">Blogs</a>
+        </div>
+        <div class="right">
+            <div class="dropdown">
+                <a href="#"><img src="/coffee shop project/menu icon.webp" class="menubar"></a>
+                <div class="dropdown-content">
+                    <a href="Hotcoffees.html">Hot Coffees</a>
+                    <a href="Coldcoffees.html">Cold Coffees</a>
+                    <a href="Sandwiches.html">Sandwiches</a>
+                    <a href="Soups and Salads.html">Soups And Salads</a>
+                    <a href="Pastries and Desserts.html">Pastries And Desserts</a>
+                </div>
+            </div>
+            <!-- <div class="rightsec1">
+                <a href="#">
+                    <button type="submit" class="search-btn">
+                        <img src="/Images/search.png" class="icon">
+                    </button>
+                </a>
+            </div> -->
+            <div class="rightsec3">
+                <a href="Login.html"><button class="login-btn">Login</button></a>
+            </div>
+            <div class="rightsec2">
+                <a href="#">
+                    <img src="/coffee shop project/shopping-cart.png" alt="" class="cart">
+                </a>
+            </div>
+        </div>
+    </header> 
+    <main>
+        <h1>OUR BLOGS</h1>
+        <div class="blog_container">
+            <div class="video_container">
+                <div class="image_container">
+                    <img src="/coffee shop project/blogs.webp" class="blog">
+                </div>
+                <div class="information">
+                    <h3>Tasty And Refreshing Coffee</h3>
+                    <p>By Admin / 1st May, 2023</p>
+                    <button class="read-btn">Read More</button>
+                </div>
+            </div>
+            <div class="video_container">
+                <div class="image_container">
+                    <img src="/coffee shop project/blogs.webp" class="blog">
+                </div>
+                <div class="information">
+                    <h3>Tasty And Refreshing Coffee</h3>
+                    <p>By Admin / 1st May, 2023</p>
+                    <button class="read-btn">Read More</button>
+                </div>
+            </div>
+            <div class="video_container">
+                <div class="image_container">
+                    <img src="/coffee shop project/blogs.webp" class="blog">
+                </div>
+                <div class="information">
+                    <h3>Tasty And Refreshing Coffee</h3>
+                    <p>By Admin / 1st May, 2023</p>
+                    <button class="read-btn">Read More</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <div class="media-icons">
+            <img src="/coffee shop project/facebook.png" class="media-icon1">
+            <img src="/coffee shop project/instagram.png" class="media-icon1">
+            <img src="/coffee shop project/linkedin.png" class="media-icon1">
+            <img src="/coffee shop project/twitter.png" class="media-icon1">
+            <img src="/coffee shop project/pinterest.png" class="media-icon1">
+            <p>Designed By Mr.Web Designer|All Rights Reserved<br>The Content and Images used on this site are copyright protected and copyrights vests with the respective owners.<br>The usage of the content and images on this website is intended to promote the works and no endorsement of the artist shall be implied.<br>Unauthorized use is prohibited and punishable by Law.</p>
+        </div>
+    </footer>
+</body>
+</html>
